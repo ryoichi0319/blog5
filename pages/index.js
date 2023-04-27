@@ -4,9 +4,9 @@ import Hero from 'components/hero'
 export default function Home() {
   return (
     <>
-     a
-       <Hero/>
-    
+       <Hero 
+          title="Cube"
+          subtitle="アウトプットしていくサイト"/>
 
      
     </>

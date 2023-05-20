@@ -3,5 +3,5 @@
     "baseUrl": "."
     
   },
-"include": ["components","pages","styles","public"]
+"include": ["components","pages","styles","public", "lib"]
 }

@@ -7,4 +7,5 @@
 .large{
     composes: default;
     max-width: 1280px;
+    
 }

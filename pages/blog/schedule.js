@@ -1,11 +1,16 @@
 import { getPostBySlug } from "lib/api"
 import Container from "components/container"
+import PostHeader from "components/post-header"
+import PostBody from "components/post-body"
+import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from "components/two-column"
+import Image from 'next/legacy/image'
+import ConvertBody from "components/convert-body"
 
 export default function Schedule({
     title,
     publish,
     content,
-    q,
+    eyecatch,
     categories,
 })
 
@@ -13,13 +18,36 @@ export default function Schedule({
 {
     return (
     <Container>
-        <h1>{title}</h1>
+        <article>
+            <PostHeader title={title} subtitle="Blog Article" publish={publish} />
+         <figure>
+            <Image 
+               src={eyecatch.url}
+               alt=""
+               layout="responsive"
+               width={eyecatch.width}
+               height={eyecatch.height}
+               sizes="(min-width:1152px) 1152px, 100vw"
+               priority
+               />
+         </figure>
+         <TwoColumn>
+            <TwoColumnMain>
+                <PostBody>
+                    <ConvertBody contentHTML = {content} />
+                </PostBody>
+            </TwoColumnMain>
+            <TwoColumnSidebar></TwoColumnSidebar>
+
+         </TwoColumn>
+
+        </article>
         
     </Container>
     )
 }
 export async function getStaticProps(){
-    const slug = "micro"
+    const slug = "schedule"
     const post  = await getPostBySlug(slug)
 
     return {

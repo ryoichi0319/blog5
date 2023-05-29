@@ -36,6 +36,7 @@ export default function About(){
     <TwoColumnMain>     
     <PostBody>
        <p>
+        abcdefg
          Cubeが得意とする分野はモノづくりです。３次元から２次元の造形、プログラミングやデザインなど、さまざま
          な技術をくみあわせることによって社会や環境と結びつけるクリエイティブを提案し続けています。
        </p>

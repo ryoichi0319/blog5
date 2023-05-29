@@ -2,6 +2,7 @@ import { getPostBySlug } from "lib/api"
 import Container from "components/container"
 import PostHeader from "components/post-header"
 import PostBody from "components/post-body"
+import PostCategories from "components/post-categories"
 import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from "components/two-column"
 import Image from 'next/legacy/image'
 import ConvertBody from "components/convert-body"
@@ -12,10 +13,8 @@ export default function Schedule({
     content,
     eyecatch,
     categories,
-})
+}){
 
-
-{
     return (
     <Container>
         <article>
@@ -37,7 +36,9 @@ export default function Schedule({
                     <ConvertBody contentHTML = {content} />
                 </PostBody>
             </TwoColumnMain>
-            <TwoColumnSidebar></TwoColumnSidebar>
+            <TwoColumnSidebar>
+                <PostCategories categories={categories} />
+            </TwoColumnSidebar>
 
          </TwoColumn>
 
@@ -46,9 +47,12 @@ export default function Schedule({
     </Container>
     )
 }
+
+
 export async function getStaticProps(){
     const slug = "schedule"
     const post  = await getPostBySlug(slug)
+    
 
     return {
         
@@ -58,8 +62,8 @@ export async function getStaticProps(){
             content: post.content,
             eyecatch: post.eyecatch,
             categories: post.categories,
-
-        }
+        },
+        
     }
     
-}  
+}

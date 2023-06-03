@@ -18,10 +18,13 @@
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "html-react-parser": "^3.0.16",
+    "html-to-text": "^9.0.5",
     "microcms-js-sdk": "^2.4.0",
     "next": "13.3.0",
+    "plaiceholder": "^3.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "sharp": "^0.32.1"
   }
 }

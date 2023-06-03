@@ -6,7 +6,7 @@ export default function ConvertBody({contentHTML}) {
         replace: (node) => {
             if (node.name === 'img'){
                 const { src, alt, width, height} = node.attribs
-                console.log(node)
+                console.log(node,"convertnode")
                 return (
                     <Image
                        layout = "responsive"

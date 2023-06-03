@@ -5,7 +5,7 @@ import  { faFolderOpen } from '@fortawesome/free-regular-svg-icons'
 
 
 export default function PostCategories({ categories }) {
-  console.log(categories,"catego")
+  
     return (
       <div className={styles.flexContainer}>
         <h3 className={styles.heading}>

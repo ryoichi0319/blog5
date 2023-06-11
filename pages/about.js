@@ -4,6 +4,7 @@ import Hero from 'components/hero'
 import PostBody from 'components/post-body'
 import Contact from 'components/contact'
 import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from 'components/two-column'
+import Accordion from "components/accordion"
 import Image from "next/image"
 import eyecatch from "images/about.jpg"
 
@@ -53,6 +54,19 @@ export default function About(){
        <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt ea repellat minima dolores sunt corporis molestiae modi saepe dolor expedita? Quasi distinctio aut ab nobis veritatis, possimus magnam animi error?
        </p>
+       <h2>FAQ</h2>
+       <Accordion heading="プログラミングのポイントについて">
+        <p>
+          プログラミングのポイントは、つくりたいものを作ることです。楽しいいことから思いつき
+          目標とゴールを決め、そこに向かってさまざまな課題を設定していきながら、プログラムを作っていきます。
+        </p>
+       </Accordion>
+       <Accordion heading="古代語の解読について">
+        <p>古代語をLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, incidunt consequatur? Molestias voluptates neque voluptatem impedit eaque quia, voluptatum doloremque? Soluta dicta incidunt quidem necessitatibus earum libero eos, ipsa consequuntur!</p>
+       </Accordion>
+       <Accordion heading="公開リポジトリについて">
+        <p>公開リポジトリを活用するとLorem ipsum dolor sit amet consectetur adipisicing elit. Placeat optio repellat beatae repudiandae molestiae odio consequatur tenetur sit perferendis recusandae officiis, excepturi, libero quam qui necessitatibus voluptatibus tempore aliquam eum!</p>
+       </Accordion>
        </PostBody>
        </TwoColumnMain>  
 

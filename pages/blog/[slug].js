@@ -101,7 +101,6 @@ export async function getStaticProps(context) {
 
   const allSlugs = await getAllSlugs()
   const [prevPost, nextPost] = prevNextPost(allSlugs, slug)
-
   return {
     props: {
       title: post.title,

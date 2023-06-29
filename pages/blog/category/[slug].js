@@ -5,6 +5,7 @@ import PostHeader from "components/post-header";
 import Posts from "components/posts";
 import { getPlaiceholder } from "plaiceholder";
 import { eyecatchLocal } from "lib/constants";
+
 export default function Category({ name, posts }){
     return(
         <Container>
@@ -28,7 +29,6 @@ export async function getStaticProps(context){
    
     const allCats = await getAllCategories()
     const cat = allCats.find(({slug}) => slug === catSlug)
-    console.log(context)
     const posts = await getAllPostsByCategory(cat.id)
     for(const post of posts){
         if(!post.hasOwnProperty('eyecatch')){

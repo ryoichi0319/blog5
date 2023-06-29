@@ -15,7 +15,7 @@ export default function Pagination({
                 <li className={styles.prev}>
                     <Link href={prevUrl}>
                         <div className={styles.iconText}>
-                        <FontAwesomeIcon icon={faChevronLeft} color='var(--gray-25'/>
+                        <FontAwesomeIcon icon={faChevronLeft} color='var(--gray-25)'/>
                         <span>{prevText}</span>
                         </div>
                     </Link>
